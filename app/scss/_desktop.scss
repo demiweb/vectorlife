@@ -1050,6 +1050,7 @@
         top: 0;
         left: 0;
         object-fit: cover;
+        transition: all 5s ease-in-out;
       }
     }
 
@@ -1070,6 +1071,14 @@
 
       p {
         padding-right: 1.25rem;
+      }
+    }
+
+    &:hover {
+      .img {
+        img {
+          transform: scale(1.2);
+        }
       }
     }
   }
@@ -1341,11 +1350,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: url("../img/calend1.svg") no-repeat center / 1.5rem 1.5rem;
   right: 2rem;
 }
+
 .own-rising__slider {
   .swiper-wrapper {
     cursor: none;
   }
 }
+
 .cursor-block {
   position: fixed;
   width: 5rem;
@@ -1360,16 +1371,183 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   pointer-events: none;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+
   &.go-cur {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
+
   img {
     width: 1.5rem;
     height: auto;
   }
 
 }
+
 .burger {
   display: none;
+}
+
+
+.section-form__bottom {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.demiweb {
+  margin-top: 1rem;
+  width: auto;
+  height: 1.8rem;
+  display: flex;
+  margin-left: auto;
+
+
+  a, img {
+    width: auto;
+    height: 100%;
+    display: flex;
+  }
+}
+
+.textual-block {
+  width: 100%;
+  padding: 130px 0;
+
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.text-block {
+  padding: 50px 40px;
+  border-radius: 30px;
+  border: 1px solid #f1f1f1;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    @include title;
+    color: $main-color;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $second-font;
+    color: $main-color;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3, h4 {
+    font-size: 1.8rem;
+  }
+
+  h5, h6 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    margin-bottom: 1.5rem;
+
+    li {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+      position: relative;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        width: 0.5rem;
+        height: 0.5rem;
+        position: absolute;
+        top: 0.4rem;
+        left: 0;
+        background: $main-color;
+        border-radius: 50%;
+        display: inline-block;
+        content: '';
+      }
+    }
+  }
+
+  blockquote {
+    font-family: $second-font;
+    background: #f1f1f1;
+    border-radius: 1rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    text-align: center;
+    color: $main-color;
+    padding: 4rem 6rem;
+    position: relative;
+    z-index: 2;
+    margin: 2rem;
+
+
+    &::after, &::before {
+      content: '"';
+      position: absolute;
+      top: 0.5rem;
+      left: 1.1rem;
+      font-size: 4em;
+      font-family: Arial;
+    }
+
+    &::after {
+      top: auto;
+      left: auto;
+      bottom: 0.5rem;
+      right: 1.1rem;
+      transform: rotate(180deg);
+    }
+
+
+  }
+
+  ol {
+    margin-bottom: 1.5rem;
+    counter-reset: numOl;
+    li {
+      margin-bottom: 1rem;
+      counter-increment: numOl;
+      &::before {
+        content: counter(numOl) '.';
+        display: inline-block;
+        margin-right: 0.3rem;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  p, li {
+    font-size: 1rem;
+
+    strong {
+      font-weight: 600;
+    }
+
+    a {
+      color: #fdbc3b;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

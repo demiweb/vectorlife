@@ -386,3 +386,7 @@ function wordBlockParallax() {
 wordBlockParallax();
 
 //words parallax
+
+if (document.querySelector('.textual-block')) {
+    document.querySelector('.header').classList.add('active');
+}
