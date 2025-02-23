@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'royal';
+  src: url('../fonts/royal/Royal Crescent Bold.otf');
+  src: local('royal Bold'), local('royal-bold'),
+  url('../fonts/royal/Royal Crescent Bold.otf?#iefix') format('embedded-opentype'),
+  url('../fonts/royal/Royal Crescent Bold.woff2') format('woff2'),
+  url('../fonts/royal/Royal Crescent Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'royal';
+  src: url('../fonts/royal/Royal Crescent Light.otf');
+  src: local('royal Light'), local('royal-Light'),
+  url('../fonts/royal/Royal Crescent Light.otf?#iefix') format('embedded-opentype'),
+  url('../fonts/royal/Royal Crescent Light.woff2') format('woff2'),
+  url('../fonts/royal/Royal Crescent Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'royal';
+  src: url('../fonts/royal/Royal Crescent.otf');
+  src: local('royal Regular'), local('royal-Regular'),
+  url('../fonts/royal/Royal Crescent.otf?#iefix') format('embedded-opentype'),
+  url('../fonts/royal/Royal Crescent.woff2') format('woff2'),
+  url('../fonts/royal/Royal Crescent.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
